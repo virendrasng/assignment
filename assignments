@@ -1,0 +1,4 @@
+1. create one ec2 from your aws account and login from your local machine using ssh client(putty/gitbash/terminal)
+    os:  ubuntu22
+    type: t2.micro
+

@@ -12,3 +12,17 @@
    16  ls -lrt
    17  tree my-app/
    18  history
+-----
+    1  apt install docker.io
+    2  clear
+    3  docker
+    4  clear
+    5  docker run -itd -p 8080:8080 –name=jen jenkins/jenkins:lts
+    6  docker run -itd -p 8080:8080 -–name=jen jenkins/jenkins:lts
+    7  docker run -itd -p 8080:8080 -–name jen jenkins/jenkins:lts
+    8  docker run -itd -p 8080:8080 jenkins/jenkins:lts
+    9  docker ps 
+   10  clear
+   11  docker ps
+   12  docker exec -it bb64858fcd34 cat /var/jenkins_home/secrets/initialAdminPassword
+   13  history

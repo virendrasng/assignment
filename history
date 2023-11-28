@@ -1,0 +1,14 @@
+    5  mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+    6  javac 
+    7  sudo apt install openjdk-11-jdk-headless
+    8  sudo apt update
+    9  sudo apt install openjdk-11-jdk-headless
+   10  java -version
+   11  sudo apt install maven
+   12  mvn --version
+   13  history
+   14  mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+   15  sudo apt install tree -y
+   16  ls -lrt
+   17  tree my-app/
+   18  history

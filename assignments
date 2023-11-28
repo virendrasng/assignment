@@ -2,3 +2,7 @@
     os:  ubuntu22
     type: t2.micro
 
+2. create jenkins server using docker.
+        docker run -itd -p 8080:8080 jenkins/jenkins:lts
+
+3. create maven type job in Jenkins, install maven through jenkins tools, ensure maven job should to build.

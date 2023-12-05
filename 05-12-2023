@@ -1,0 +1,11 @@
+
+start jenkins :
+    1  clear
+    2  docker run -itd -p 8080:8080 --name jen jenkins/jenkins:lts 
+    3  sudo apt update && sudo apt install docker.io -y
+    4  docker run -itd -p 8080:8080 --name jen jenkins/jenkins:lts 
+    5  chown ubuntu:ubuntu /var/run/docker.sock
+    6  sudo chown ubuntu:ubuntu /var/run/docker.sock
+    7  docker run -itd -p 8080:8080 --name jen jenkins/jenkins:lts 
+    8  docker ps 
+    9  history

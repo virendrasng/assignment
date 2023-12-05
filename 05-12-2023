@@ -1,3 +1,18 @@
+start nexus:
+ 2  docker run -d -p 8081:8081 --name nexus sonatype/nexus
+    3  sudo apt  install docker.io 
+    4* 
+    5  sudo apt  install docker.io 
+    6  docker
+    7  docker ps
+    8  chown ubuntu:ubuntu /var/run/docker.sock
+    9  sudo chown ubuntu:ubuntu /var/run/docker.sock
+   10  docker ps
+   11  docker run -d -p 8081:8081 --name nexus sonatype/nexus
+   12  docker ps
+   13  docker logs nexus
+   14  docker exec -it nexus bash
+
 
 start jenkins :
     1  clear

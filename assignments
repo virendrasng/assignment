@@ -19,4 +19,10 @@
    endpoint url example: 
    http://devops:1126fb92da6436191d374be463f8196be7@18.204.3.47:8080/job/webapp-pipeline/build?token=jshbvchgvchgvghcv
 
-8. 
+8. Authenticate for ssh git  url with keys:
+    git@github.com:socgenaws/webapp.git
+
+     ssh-keygen
+      id_rsa  ==> jenkins
+      id_rsa.pub ==> github
+9.

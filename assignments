@@ -14,4 +14,9 @@
 6. run docker start command using @reboot with crontab commnd.
     crontab -e
      @reboot /usr/bin/sh /home/ubuntu/start.sh
+7. prepare webhook to trigeer jenkins job based on push event. 
+    
+   endpoint url example: 
+   http://devops:1126fb92da6436191d374be463f8196be7@18.204.3.47:8080/job/webapp-pipeline/build?token=jshbvchgvchgvghcv
 
+8. 

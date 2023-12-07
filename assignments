@@ -32,3 +32,6 @@
     add provate key
     enter all required details
     ensure executros are up andrunning.
+
+10. add cloud agent for dynamic agent creation.
+        install aws ec2 plugin.

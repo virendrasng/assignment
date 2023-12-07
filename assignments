@@ -11,3 +11,7 @@
 4. create nexus and jenkins servers with docker
 
 5. cretae pipelines jobs with Jenkinsfile
+6. run docker start command using @reboot with crontab commnd.
+    crontab -e
+     @reboot /usr/bin/sh /home/ubuntu/start.sh
+

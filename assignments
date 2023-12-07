@@ -25,4 +25,10 @@
      ssh-keygen
       id_rsa  ==> jenkins
       id_rsa.pub ==> github
-9.
+9. Configure jenkins agent on jenkins master.
+    create ec2 for jenkins agent
+    create directory in agent
+    add new node in Jenkins master from manage jenkins ==> node  
+    add provate key
+    enter all required details
+    ensure executros are up andrunning.

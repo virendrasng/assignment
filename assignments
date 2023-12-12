@@ -35,3 +35,19 @@
 
 10. add cloud agent for dynamic agent creation.
         install aws ec2 plugin.
+
+11. setup sonarqube server:
+      docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:lts
+12. integrate sonarqube with jwenkins job  using Jenkinsfile
+
+    steps:
+        1. install sonarqube plugin and configure with sonarqube server url  and token.
+        2. add stage in jenkinsfile
+             stage('SonarQube Analysis') {
+                    steps {
+                      withSonarQubeEnv('sonar') {
+                          sh "mvn clean verify sonar:sonar -Dsonar.projectKey=myapp"
+                      }
+                    }
+                }
+

@@ -64,3 +64,12 @@
 
 16. how to assign hostname to docker container
     docker run -it --link mypostgres --rm postgres psql -h mypostgres -U postgres
+
+17. how to use curl command in Dockerfile
+
+18. how to create users and groups, change ownership of the files with thee users.
+
+19. how to run start.sh as aport of Dockerfile
+   use this command woth CMD:
+       ./startup.sh run
+        CMD ["sh", "-c", "startup.sh run"]

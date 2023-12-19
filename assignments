@@ -54,4 +54,8 @@
 
 14. create postgres database using docker with out volume, connect db and insert some data.
        ref:  https://hub.docker.com/_/postgres
+      245  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+      246  docker inspect mypostgres
+      247  docker run -it --rm postgres psql -h 172.17.0.2 -U postgres
 
+15. create jenkins container with docker volume (mount path: /var/jenkins)

@@ -62,3 +62,5 @@
    docker volume create jenkins-data
    docker run -itd -p 8080:8080 --name jenkins -v jenkins-data:/var/jenkins_home jenkins/jenkins:lts
 
+16. how to assign hostname to docker container
+

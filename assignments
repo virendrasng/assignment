@@ -51,3 +51,7 @@
                     }
                 }
 13. add dynamic agent using aws ec2 instance using Jenklins cloud plugin. 
+
+14. create postgres database using docker with out volume, connect db and insert some data.
+
+

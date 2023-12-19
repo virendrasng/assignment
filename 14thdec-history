@@ -168,3 +168,143 @@
   168  curl  http://localhost:80/
   169  docker run -itd -p 81:80 --name=n2 nginx
   170  history
+
+  172  docker ps -a
+  173  chown ubuntu:ubuntu /var/run/docker.sock
+  174  sudo chown ubuntu:ubuntu /var/run/docker.sock
+  175  docker ps -a
+  176  dcoker start n2
+  177  docker start n2
+  178  docker ps 
+  179  docker inspect n2
+  180  docker network ls 
+  181  docker network inspect bridge
+  182* docker inspe
+  183  docker network inspect bridge
+  184  docker start n1
+  185  docker network inspect bridge
+  186  docker start n2
+  187  docker network inspect bridge
+  188  docker ps
+  189  curl http://localhost:80
+  190  curl http://localhost:81
+  191  clear
+  192  docker network ls
+  193  docker ps
+  194  docker run -itd --network=host --name=h1 nginx
+  195  docker ps 
+  196  docker ps -a
+  197  docker logs h1
+  198  docker pstop n1
+  199  docker stop n1
+  200  docker ps
+  201  docker rm h1
+  202  docker run -itd --network=host --name=h1 nginx
+  203  dcoker ps 
+  204  docker ps 
+  205  docker network ls
+  206  docker network create mynw
+  207  docker network ls
+  208  docker ps 
+  209  docker network disconnect  bridge n2
+  210  docker inspect n2
+  211  clear
+  212  docker network connect mynw n2
+  213  docker inspect n2
+  214  clear
+  215  docker run --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  216  docker ps 
+  217  docker run -it --rm --network mynw postgres psql -h mypostgres -U postgres
+  218  docker run -it --rm postgres psql -h mypostgres -U postgres
+  219  docker inspect mypostgres
+  220  docker run -it --rm postgres psql -h 172.17.0.2 -U postgres
+  221  docker -s -a
+  222  docker -ps -a
+  223  docker ps -a
+  224  docker stop mypostgres
+  225  docker rm mypostgres
+  226  pwd
+  227  docker volume create postgresvol
+  228  docker volume inspect postgresvol
+  229  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  230  docker ps 
+  231  docker inspect mypostgres
+  232  docker run -it --rm postgres psql -h 172.17.0.2 -U postgres
+  233  docker sop mypostgres
+  234  docker stop mypostgres
+  235  docker ps
+  236  docker inspect mypostgres
+  237  docker volume inspect postgresvol
+  238  cd /var/lib/docker/volumes/postgresvol/_data
+  239  sudo cd /var/lib/docker/volumes/postgresvol/_data
+  240  cleaer
+  241  clear
+  242  docker ps -a
+  243  docker rm mypostgres
+  244  docker ps -a
+  245  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  246  docker inspect mypostgres
+  247  docker run -it --rm postgres psql -h 172.17.0.2 -U postgres
+  248  history
+  249  clear
+  250  docker run --help
+  251  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -h mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  252  docker ps -a
+  253  docker stop mypostgres
+  254  docker rm mypostgres
+  255  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -h mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  256  docker ps 
+  257  docker ps -wide
+  258  docker ps -w
+  259  docker p
+  260  docker ps
+  261  docker run -it --rm postgres psql -h mypostgres -U postgres
+  262  docker inspect mypostgres
+  263  docker inspect mypostgres|grep host
+  264  clear
+  265  docker run --help
+  266  docker run -it --link mypostgres --rm postgres psql -h mypostgres -U postgres
+  267  docker ps -a
+  268  docker stop mypostgres
+  269  docker rm mypostgres
+  270  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  271  docker ps 
+  272  docker run -it --link mypostgres --rm postgres psql -h mypostgres -U postgres
+  273  clear
+  274  ls -lrt
+  275  touch Dockerfile
+  276  vi Dockerfile 
+  277  #docker build -t example .
+  278  docker
+  279  docker build --help
+  280  docker build -t example .
+  281  vi Dockerfile 
+  282  docker build -t example .
+  283  vi Dockerfile 
+  284  docker build -t example .
+  285  docker run -itd --name=t1 ubuntu
+  286  dcoker exec -it t1 bash
+  287  docker exec -it t1 bash
+  288  javac
+  289  docker exec -it t1 bash
+  290  clear
+  291  ls -lrt
+  292  pwd
+  293  cd
+  294  git clone https://github.com/socgenaws/assignment.git
+  295  cd assignment/
+  296  clear
+  297  cd example/
+  298  ls -lrt
+  299  docker build -t mytomcat .
+  300  git pull
+  301  docker build -t mytomcat .
+  302  git pull
+  303  docker build -t mytomcat .
+  304  git pull
+  305  docker build -t mytomcat .
+  306  git pull
+  307  docker build -t mytomcat .
+  308  docker ps 
+  309  docker exec -it a9a9e3c0bde4 bash
+  310  history

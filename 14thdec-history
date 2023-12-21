@@ -308,3 +308,111 @@
   308  docker ps 
   309  docker exec -it a9a9e3c0bde4 bash
   310  history
+
+  311  clear
+  312  ls -lrt
+  313  docker ps -a 
+  314  chown ubuntu:ubuntu /var/run/docker.sock
+  315  sudo chown ubuntu:ubuntu /var/run/docker.sock
+  316  ls -lrt
+  317  clear
+  318  pwd
+  319  ls -lrt
+  320  git clone https://github.com/qf-devops/docker.git
+  321  ls -lrt
+  322  cd docker/
+  323  ls -lrt
+  324  cler
+  325  ls -lrt
+  326  cat Dockerfile 
+  327  cat requirements.txt 
+  328  cat app.py 
+  329  clear
+  330  cat Dockerfile 
+  331  docker build -t web:1.0 .
+  332  docker imagesa
+  333  docker images
+  334  docker 
+  335  cd
+  336  pwd
+  337  exit
+  338  pwd
+  339  cd docker/
+  340  cat Dockerfile 
+  341  clear
+  342  docker images
+  343  docker run -itd --name=redis redis
+  344  docker ps 
+  345  docker images
+  346  docker run -itd -p 5000:5000 --link redis --name=web web:1.0
+  347  docker ps 
+  348  docker logs web
+  349  docker stop web
+  350  docker stop redis
+  351  docker rm redis
+  352  docker run -itd --name=redis redis
+  353  docker rm web
+  354  docker inspect redis
+  355  vi dockerfile
+  356  pwd
+  357  vi Dockerfile 
+  358  vi app.py 
+  359  docker build -t web:2.0 .
+  360  docker p 
+  361  docker p s
+  362  docker ps
+  363  docker run -itd -p 5000:5000 --name=web web:2.0
+  364  docker ps 
+  365  docker stop redis
+  366  docker run -itd alpine
+  367  docker start redis
+  368  docker ps 
+  369  docker inspect redis
+  370  docker stop redis
+  371  docker rm redis
+  372  docker run -itd -p 6379:6379 --name=redis redis
+  373  vi app.py 
+  374  docker build -t web:3.0 .
+  375  docker stop web
+  376  docker rm  web
+  377  docker run -itd -p 5000:5000 --name=web web:3.0
+  378  docker ps 
+  379  hostname -i
+  380  vi app.py 
+  381  docker build -t web:3.0 .
+  382  docker stop web
+  383  docker rm  web
+  384  docker run -itd -p 5000:5000 --name=web web:3.0
+  385  docker stop web
+  386  docker rm web
+  387  docker run -itd -p 5000:5000 --link redis --name=web web:1.0
+  388  docker sp 
+  389  docker ps
+  390  vi app.py 
+  391  clear
+  392  pwd
+  393  ls -lrt
+  394  history
+  395  pwd
+  396  cd
+  397  touch docker-compose.yml
+  398  vi docker-compose.yml 
+  399  clear
+  400  docker-compose
+  401  sudo apt  install docker-compose
+  402  which docker-compose
+  403  docker-compose --help
+  404  docker-compose up --help
+  405  docker-compose -f docker-compose.yml up -d
+  406  vi docker-compose.yml 
+  407  docker-compose -f docker-compose.yml up -d
+  408  docker ps 
+  409  docker rm -vf $(docker ps -a -q)
+  410  docker ps 
+  411  docker ps -a
+  412  docker-compose -f docker-compose.yml up -d
+  413  cat docker-compose.yml 
+  414  dcoker-compose ps
+  415  docker-compose ps 
+  416  history
+

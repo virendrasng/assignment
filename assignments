@@ -85,5 +85,8 @@ https://ubuntu.com/tutorials/install-and-configure-nginx#2-installing-nginx
 22. build docker image using dockerfile which is there in docker repo AND RUNE RIS DOCKER build with Jenkins pipeline.
 
 23. push docker image to docker registry (docker hub, ecr)
+24. execute docker-compose command to start multiple containers.
+25. run docker-compose command on remote machine using Jenkins pipeline
+
 
 

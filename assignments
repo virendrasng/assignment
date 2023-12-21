@@ -76,3 +76,9 @@
 20. create ngixn dockerfile with customizations as per below mentioned link:
 
 https://ubuntu.com/tutorials/install-and-configure-nginx#2-installing-nginx
+
+21. build docker python application using below repo:
+   Git clone https://github.com/qf-devops/docker.git
+   cd docker
+  docker build -t web .
+

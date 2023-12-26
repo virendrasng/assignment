@@ -416,3 +416,128 @@
   415  docker-compose ps 
   416  history
 
+  416  history
+  417  clear
+  418  pwd
+  419  sudo -i
+  420  ls -lrt
+  421  cd docker/
+  422  ls -lrt
+  423  cd ..
+  424  cat docker-compose.yml 
+  425  which docker-compose
+  426  history
+  427  cat docker-compose.yml 
+  428  docker-compose up -d
+  429  docker ps 
+  430  chown ubutu:ubuntu /var/run/docker.sock
+  431  sudo chown ubutu:ubuntu /var/run/docker.sock
+  432  docker-compose up -d
+  433  docker ps 
+  434  sudo chown ubutu:ubuntu /var/run/docker.sock
+  435  sudo chown ubuntu:ubuntu /var/run/docker.sock
+  436  docker-compose up -d
+  437  docker-compose ps
+  438  docker-compos ps
+  439  docker-compose ps 
+  440  docker-compose \stop
+  441  docker-compose r
+  442  docker-compose rmm
+  443  docker-compose rm
+  444  docker-compose ps
+  445  docker-compose ps 
+  446  pwd
+  447  ls -lrt
+  448  v docker-compose.yml docker-compose.yml.bkp
+  449  mv docker-compose.yml docker-compose.yml.bkp
+  450  ls -rt
+  451  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 675467602881.dkr.ecr.us-east-1.amazonaws.com
+  452  cd /tmp/
+  453  ls -lrt
+  454  cat deploy.sh 
+  455  cd
+  456  ls -lrt
+  457  rm -rf hitcount-app/
+  458  ls -lrt
+  459  docker-compose stop
+  460  cd hitcount-app/
+  461  docker-compose stop
+  462  docker-compose rm 
+  463  docker-compose rm  --help
+  464  docker-compose rm -f
+  465  docker-compose ps
+  466  ls -lrt
+  467  cd ..
+  468  cd hitcount-app/
+  469  docker-compose ps
+  470  ls -lrt
+  471  cat docker-compose.yml 
+  472  docker-compose ps
+  473  cd
+  474  cd hitcount-app/
+  475  docker-compose ps
+  476  docker ps -a
+  477  docker rm -vf (docker ps -a -q)
+  478  docker rm -vf$ (docker ps -a -q)
+  479  docker rm -vf $(docker ps -a -q)
+  480  docker ps -a
+  481  cd
+  482  cd hitcount-app/
+  483  docker-compose ps
+  484  cd
+  485  cd h
+  486  cd hitcount-app/
+  487  docker-compose ps
+  488  cat docker-compose.yml 
+  489  docker-compose up -d
+  490  docker-compose up --help
+  491  docker-compose up -d  --force-recreate
+  492  docker-compose up -d --quiet-pull
+  493  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 675467602881.dkr.ecr.us-east-1.amazonaws.com
+  494  clear
+  495  docker pull 675467602881.dkr.ecr.us-east-1.amazonaws.com/web:4.0
+  496  aws get sts
+  497  aws configure
+  498  clear
+  499  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 675467602881.dkr.ecr.us-east-1.amazonaws.com
+  500  docker pull 675467602881.dkr.ecr.us-east-1.amazonaws.com/web:4.0
+  501  docker-compose up -d  --force-recreate
+  502  cd
+  503  cd hitcount-app/
+  504  ls -lrt
+  505  docker-compose up -d --quiet-pull
+  506  docker-compose rm -f
+  507  docker-compose stop
+  508  docker-compose rm -f
+  509  docker-compose ps
+  510  cd
+  511  cd hitcount-app/
+  512  docker-compose ps
+  513  clear
+  514  docker-compose
+  515  docker-compose scale --help
+  516  docker-compose scale web=3
+  517  docker-compose scale redis=3
+  518  docker-compose ps
+  519  clear
+  520  cd
+  521  docker-compose stop
+  522  cd hitcount-app/
+  523  docker-compose stop
+  524  docker-compose rm -f
+  525  clear
+  526  cd
+  527  docker
+  528  docker swarm --help
+  529  docker swarm init
+  530  docker node ls 
+  531  cd hitcount-app/
+  532  ls -rt
+  533  clear
+  534  ls -lrt
+  535  cat stack-dc.yml 
+  536  docker stack 
+  537  docker stack deploy -c stack-dc.yml mystack
+  538  docker stack ls
+  539  docker stack ps mystack
+  540  history

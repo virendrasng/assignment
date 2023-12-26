@@ -87,6 +87,13 @@ https://ubuntu.com/tutorials/install-and-configure-nginx#2-installing-nginx
 23. push docker image to docker registry (docker hub, ecr)
 24. execute docker-compose command to start multiple containers.
 25. run docker-compose command on remote machine using Jenkins pipeline
+26. run docker comandson remote machines using jenkinsfile
+    ref; https://www.jenkins.io/doc/pipeline/steps/ssh-agent/ 
+    node {
+      sshagent (credentials: ['deploy-dev']) {
+        sh 'ssh -o StrictHostKeyChecking=no -l cloudbees 192.168.1.106 uname -a'
+      }
+    }
 
 
 

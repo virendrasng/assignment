@@ -95,5 +95,10 @@ https://ubuntu.com/tutorials/install-and-configure-nginx#2-installing-nginx
       }
     }
 
+27. create a swarm cluster and deploy in docker swarm cluster.
+    https://docs.docker.com/engine/swarm/how-swarm-mode-works/nodes/
+
+28. Read about k8s
+
 
 

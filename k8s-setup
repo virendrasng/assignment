@@ -1,0 +1,113 @@
+master setup:
+
+   2  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    3  cat <<EOF | sudo tee /etc/docker/daemon.json
+    4  {
+    5    "exec-opts": ["native.cgroupdriver=systemd"],
+    6    "log-driver": "json-file",
+    7    "log-opts": {
+    8      "max-size": "100m"
+    9    },
+   10    "storage-driver": "overlay2"
+   11  }
+   12  EOF
+   13  sudo usermod -aG docker $USER
+   14  echo $USER
+   15  sudo chmod 666 /var/run/docker.sock
+   16  sudo systemctl start docker.service
+   17  sudo systemctl status docker.service
+   18  sudo systemctl enable docker.service
+   19  sudo systemctl restart docker
+   20  sudo rm /etc/containerd/config.toml
+   21  sudo systemctl restart containerd
+   22  sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+   23  echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   24  sudo apt update
+   25  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   26  sudo curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   27  sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+   28  sudo curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   29  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+   30  sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+   31  sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+   32  sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+   33  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+   34  rm -rf /etc/apt/sources.list.d/kubernetes.list
+   35  sudo rm -rf /etc/apt/sources.list.d/kubernetes.list
+   36  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+   37  sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+   38  sudo touch /etc/apt/sources.list.d/kubernetes.list
+   39  sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+   40  sudo vi /etc/apt/sources.list.d/kubernetes.list
+   41  sudo apt update
+   42  sudo apt-get install -y kubelet kubeadm kubectl
+   43  history
+   44  clear
+   45  sudo apt-mark hold kubelet kubeadm kubectl
+   46  sudo kubeadm init --pod-network-cidr 10.0.0.0/16 --ignore-preflight-errors=all
+   47  mkdir -p $HOME/.kube
+   48  kubectl get node
+   49  kubectl get pod --all-namespaces
+   50  kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+   51  kubectl get pod --all-namespaces
+   52  kubectl get node
+   -------------------------------
+   53  kubectl
+   54  kubectl run --help
+   55  kubectl run n1 --image=nginx --port=80 
+   56  kubectl get pod
+   57  kubectl describe pod n1
+   58  kubectl expose --help
+   59  kubectl expose pod n1 --name=n1svc --port=80 --target-port=80 --type=Nodeport
+   60  kubectl expose pod n1 --name=n1svc --port=80 --target-port=80 --type=NodePort
+   61  kubectl get svc
+ 
+ -------------------------------------
+ node setup:
+
+
+   2  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    3  cat <<EOF | sudo tee /etc/docker/daemon.json
+    4  {
+    5    "exec-opts": ["native.cgroupdriver=systemd"],
+    6    "log-driver": "json-file",
+    7    "log-opts": {
+    8      "max-size": "100m"
+    9    },
+   10    "storage-driver": "overlay2"
+   11  }
+   12  EOF
+   13  sudo usermod -aG docker $USER
+   14  echo $USER
+   15  sudo chmod 666 /var/run/docker.sock
+   16  sudo systemctl start docker.service
+   17  sudo systemctl status docker.service
+   18  sudo systemctl enable docker.service
+   19  sudo systemctl restart docker
+   20  sudo rm /etc/containerd/config.toml
+   21  sudo systemctl restart containerd
+   22  sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+   23  echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   24  sudo apt update
+   25  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   26  sudo curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   27  sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+   28  sudo curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   29  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+   30  sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+   31  sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+   32  sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+   33  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+   34  rm -rf /etc/apt/sources.list.d/kubernetes.list
+   35  sudo rm -rf /etc/apt/sources.list.d/kubernetes.list
+   36  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+   37  sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+   38  sudo touch /etc/apt/sources.list.d/kubernetes.list
+   39  sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+   40  sudo vi /etc/apt/sources.list.d/kubernetes.list
+   41  sudo apt update
+   42  sudo apt-get install -y kubelet kubeadm kubectl
+   43  history
+   44  clear
+   45  sudo apt-mark hold kubelet kubeadm kubectl
+   46 sudo kubeadm jon command....

@@ -168,3 +168,376 @@
   168  curl  http://localhost:80/
   169  docker run -itd -p 81:80 --name=n2 nginx
   170  history
+
+  172  docker ps -a
+  173  chown ubuntu:ubuntu /var/run/docker.sock
+  174  sudo chown ubuntu:ubuntu /var/run/docker.sock
+  175  docker ps -a
+  176  dcoker start n2
+  177  docker start n2
+  178  docker ps 
+  179  docker inspect n2
+  180  docker network ls 
+  181  docker network inspect bridge
+  182* docker inspe
+  183  docker network inspect bridge
+  184  docker start n1
+  185  docker network inspect bridge
+  186  docker start n2
+  187  docker network inspect bridge
+  188  docker ps
+  189  curl http://localhost:80
+  190  curl http://localhost:81
+  191  clear
+  192  docker network ls
+  193  docker ps
+  194  docker run -itd --network=host --name=h1 nginx
+  195  docker ps 
+  196  docker ps -a
+  197  docker logs h1
+  198  docker pstop n1
+  199  docker stop n1
+  200  docker ps
+  201  docker rm h1
+  202  docker run -itd --network=host --name=h1 nginx
+  203  dcoker ps 
+  204  docker ps 
+  205  docker network ls
+  206  docker network create mynw
+  207  docker network ls
+  208  docker ps 
+  209  docker network disconnect  bridge n2
+  210  docker inspect n2
+  211  clear
+  212  docker network connect mynw n2
+  213  docker inspect n2
+  214  clear
+  215  docker run --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  216  docker ps 
+  217  docker run -it --rm --network mynw postgres psql -h mypostgres -U postgres
+  218  docker run -it --rm postgres psql -h mypostgres -U postgres
+  219  docker inspect mypostgres
+  220  docker run -it --rm postgres psql -h 172.17.0.2 -U postgres
+  221  docker -s -a
+  222  docker -ps -a
+  223  docker ps -a
+  224  docker stop mypostgres
+  225  docker rm mypostgres
+  226  pwd
+  227  docker volume create postgresvol
+  228  docker volume inspect postgresvol
+  229  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  230  docker ps 
+  231  docker inspect mypostgres
+  232  docker run -it --rm postgres psql -h 172.17.0.2 -U postgres
+  233  docker sop mypostgres
+  234  docker stop mypostgres
+  235  docker ps
+  236  docker inspect mypostgres
+  237  docker volume inspect postgresvol
+  238  cd /var/lib/docker/volumes/postgresvol/_data
+  239  sudo cd /var/lib/docker/volumes/postgresvol/_data
+  240  cleaer
+  241  clear
+  242  docker ps -a
+  243  docker rm mypostgres
+  244  docker ps -a
+  245  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  246  docker inspect mypostgres
+  247  docker run -it --rm postgres psql -h 172.17.0.2 -U postgres
+  248  history
+  249  clear
+  250  docker run --help
+  251  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -h mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  252  docker ps -a
+  253  docker stop mypostgres
+  254  docker rm mypostgres
+  255  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -h mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  256  docker ps 
+  257  docker ps -wide
+  258  docker ps -w
+  259  docker p
+  260  docker ps
+  261  docker run -it --rm postgres psql -h mypostgres -U postgres
+  262  docker inspect mypostgres
+  263  docker inspect mypostgres|grep host
+  264  clear
+  265  docker run --help
+  266  docker run -it --link mypostgres --rm postgres psql -h mypostgres -U postgres
+  267  docker ps -a
+  268  docker stop mypostgres
+  269  docker rm mypostgres
+  270  docker run -v postgresvol:/var/lib/postgresql/data --name mypostgres -e POSTGRES_PASSWORD=mysecretpassword -itd postgres
+  271  docker ps 
+  272  docker run -it --link mypostgres --rm postgres psql -h mypostgres -U postgres
+  273  clear
+  274  ls -lrt
+  275  touch Dockerfile
+  276  vi Dockerfile 
+  277  #docker build -t example .
+  278  docker
+  279  docker build --help
+  280  docker build -t example .
+  281  vi Dockerfile 
+  282  docker build -t example .
+  283  vi Dockerfile 
+  284  docker build -t example .
+  285  docker run -itd --name=t1 ubuntu
+  286  dcoker exec -it t1 bash
+  287  docker exec -it t1 bash
+  288  javac
+  289  docker exec -it t1 bash
+  290  clear
+  291  ls -lrt
+  292  pwd
+  293  cd
+  294  git clone https://github.com/socgenaws/assignment.git
+  295  cd assignment/
+  296  clear
+  297  cd example/
+  298  ls -lrt
+  299  docker build -t mytomcat .
+  300  git pull
+  301  docker build -t mytomcat .
+  302  git pull
+  303  docker build -t mytomcat .
+  304  git pull
+  305  docker build -t mytomcat .
+  306  git pull
+  307  docker build -t mytomcat .
+  308  docker ps 
+  309  docker exec -it a9a9e3c0bde4 bash
+  310  history
+
+  311  clear
+  312  ls -lrt
+  313  docker ps -a 
+  314  chown ubuntu:ubuntu /var/run/docker.sock
+  315  sudo chown ubuntu:ubuntu /var/run/docker.sock
+  316  ls -lrt
+  317  clear
+  318  pwd
+  319  ls -lrt
+  320  git clone https://github.com/qf-devops/docker.git
+  321  ls -lrt
+  322  cd docker/
+  323  ls -lrt
+  324  cler
+  325  ls -lrt
+  326  cat Dockerfile 
+  327  cat requirements.txt 
+  328  cat app.py 
+  329  clear
+  330  cat Dockerfile 
+  331  docker build -t web:1.0 .
+  332  docker imagesa
+  333  docker images
+  334  docker 
+  335  cd
+  336  pwd
+  337  exit
+  338  pwd
+  339  cd docker/
+  340  cat Dockerfile 
+  341  clear
+  342  docker images
+  343  docker run -itd --name=redis redis
+  344  docker ps 
+  345  docker images
+  346  docker run -itd -p 5000:5000 --link redis --name=web web:1.0
+  347  docker ps 
+  348  docker logs web
+  349  docker stop web
+  350  docker stop redis
+  351  docker rm redis
+  352  docker run -itd --name=redis redis
+  353  docker rm web
+  354  docker inspect redis
+  355  vi dockerfile
+  356  pwd
+  357  vi Dockerfile 
+  358  vi app.py 
+  359  docker build -t web:2.0 .
+  360  docker p 
+  361  docker p s
+  362  docker ps
+  363  docker run -itd -p 5000:5000 --name=web web:2.0
+  364  docker ps 
+  365  docker stop redis
+  366  docker run -itd alpine
+  367  docker start redis
+  368  docker ps 
+  369  docker inspect redis
+  370  docker stop redis
+  371  docker rm redis
+  372  docker run -itd -p 6379:6379 --name=redis redis
+  373  vi app.py 
+  374  docker build -t web:3.0 .
+  375  docker stop web
+  376  docker rm  web
+  377  docker run -itd -p 5000:5000 --name=web web:3.0
+  378  docker ps 
+  379  hostname -i
+  380  vi app.py 
+  381  docker build -t web:3.0 .
+  382  docker stop web
+  383  docker rm  web
+  384  docker run -itd -p 5000:5000 --name=web web:3.0
+  385  docker stop web
+  386  docker rm web
+  387  docker run -itd -p 5000:5000 --link redis --name=web web:1.0
+  388  docker sp 
+  389  docker ps
+  390  vi app.py 
+  391  clear
+  392  pwd
+  393  ls -lrt
+  394  history
+  395  pwd
+  396  cd
+  397  touch docker-compose.yml
+  398  vi docker-compose.yml 
+  399  clear
+  400  docker-compose
+  401  sudo apt  install docker-compose
+  402  which docker-compose
+  403  docker-compose --help
+  404  docker-compose up --help
+  405  docker-compose -f docker-compose.yml up -d
+  406  vi docker-compose.yml 
+  407  docker-compose -f docker-compose.yml up -d
+  408  docker ps 
+  409  docker rm -vf $(docker ps -a -q)
+  410  docker ps 
+  411  docker ps -a
+  412  docker-compose -f docker-compose.yml up -d
+  413  cat docker-compose.yml 
+  414  dcoker-compose ps
+  415  docker-compose ps 
+  416  history
+
+  416  history
+  417  clear
+  418  pwd
+  419  sudo -i
+  420  ls -lrt
+  421  cd docker/
+  422  ls -lrt
+  423  cd ..
+  424  cat docker-compose.yml 
+  425  which docker-compose
+  426  history
+  427  cat docker-compose.yml 
+  428  docker-compose up -d
+  429  docker ps 
+  430  chown ubutu:ubuntu /var/run/docker.sock
+  431  sudo chown ubutu:ubuntu /var/run/docker.sock
+  432  docker-compose up -d
+  433  docker ps 
+  434  sudo chown ubutu:ubuntu /var/run/docker.sock
+  435  sudo chown ubuntu:ubuntu /var/run/docker.sock
+  436  docker-compose up -d
+  437  docker-compose ps
+  438  docker-compos ps
+  439  docker-compose ps 
+  440  docker-compose \stop
+  441  docker-compose r
+  442  docker-compose rmm
+  443  docker-compose rm
+  444  docker-compose ps
+  445  docker-compose ps 
+  446  pwd
+  447  ls -lrt
+  448  v docker-compose.yml docker-compose.yml.bkp
+  449  mv docker-compose.yml docker-compose.yml.bkp
+  450  ls -rt
+  451  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 675467602881.dkr.ecr.us-east-1.amazonaws.com
+  452  cd /tmp/
+  453  ls -lrt
+  454  cat deploy.sh 
+  455  cd
+  456  ls -lrt
+  457  rm -rf hitcount-app/
+  458  ls -lrt
+  459  docker-compose stop
+  460  cd hitcount-app/
+  461  docker-compose stop
+  462  docker-compose rm 
+  463  docker-compose rm  --help
+  464  docker-compose rm -f
+  465  docker-compose ps
+  466  ls -lrt
+  467  cd ..
+  468  cd hitcount-app/
+  469  docker-compose ps
+  470  ls -lrt
+  471  cat docker-compose.yml 
+  472  docker-compose ps
+  473  cd
+  474  cd hitcount-app/
+  475  docker-compose ps
+  476  docker ps -a
+  477  docker rm -vf (docker ps -a -q)
+  478  docker rm -vf$ (docker ps -a -q)
+  479  docker rm -vf $(docker ps -a -q)
+  480  docker ps -a
+  481  cd
+  482  cd hitcount-app/
+  483  docker-compose ps
+  484  cd
+  485  cd h
+  486  cd hitcount-app/
+  487  docker-compose ps
+  488  cat docker-compose.yml 
+  489  docker-compose up -d
+  490  docker-compose up --help
+  491  docker-compose up -d  --force-recreate
+  492  docker-compose up -d --quiet-pull
+  493  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 675467602881.dkr.ecr.us-east-1.amazonaws.com
+  494  clear
+  495  docker pull 675467602881.dkr.ecr.us-east-1.amazonaws.com/web:4.0
+  496  aws get sts
+  497  aws configure
+  498  clear
+  499  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 675467602881.dkr.ecr.us-east-1.amazonaws.com
+  500  docker pull 675467602881.dkr.ecr.us-east-1.amazonaws.com/web:4.0
+  501  docker-compose up -d  --force-recreate
+  502  cd
+  503  cd hitcount-app/
+  504  ls -lrt
+  505  docker-compose up -d --quiet-pull
+  506  docker-compose rm -f
+  507  docker-compose stop
+  508  docker-compose rm -f
+  509  docker-compose ps
+  510  cd
+  511  cd hitcount-app/
+  512  docker-compose ps
+  513  clear
+  514  docker-compose
+  515  docker-compose scale --help
+  516  docker-compose scale web=3
+  517  docker-compose scale redis=3
+  518  docker-compose ps
+  519  clear
+  520  cd
+  521  docker-compose stop
+  522  cd hitcount-app/
+  523  docker-compose stop
+  524  docker-compose rm -f
+  525  clear
+  526  cd
+  527  docker
+  528  docker swarm --help
+  529  docker swarm init
+  530  docker node ls 
+  531  cd hitcount-app/
+  532  ls -rt
+  533  clear
+  534  ls -lrt
+  535  cat stack-dc.yml 
+  536  docker stack 
+  537  docker stack deploy -c stack-dc.yml mystack
+  538  docker stack ls
+  539  docker stack ps mystack
+  540  history

@@ -30,15 +30,11 @@ master setup:
    29  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
    30  sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
    31  sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-   32  sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
-   33  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
-   34  rm -rf /etc/apt/sources.list.d/kubernetes.list
-   35  sudo rm -rf /etc/apt/sources.list.d/kubernetes.list
+   32 
    36  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
    37  sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
    38  sudo touch /etc/apt/sources.list.d/kubernetes.list
    39  sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
-   40  sudo vi /etc/apt/sources.list.d/kubernetes.list
    41  sudo apt update
    42  sudo apt-get install -y kubelet kubeadm kubectl
    43  history

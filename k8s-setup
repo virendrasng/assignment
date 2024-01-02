@@ -42,6 +42,8 @@ master setup:
    45  sudo apt-mark hold kubelet kubeadm kubectl
    46  sudo kubeadm init --pod-network-cidr 10.0.0.0/16 --ignore-preflight-errors=all
    47  mkdir -p $HOME/.kube
+   34  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   35  sudo chown $(id -u):$(id -g) $HOME/.kube/config
    48  kubectl get node
    49  kubectl get pod --all-namespaces
    50  kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml

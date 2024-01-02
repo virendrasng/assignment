@@ -109,3 +109,17 @@ master setup:
    44  clear
    45  sudo apt-mark hold kubelet kubeadm kubectl
    46 sudo kubeadm jon command....
+
+   #################################
+   k8s client setup:
+
+   curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+  128  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+  129  sudo apt update
+  130  sudo apt -y install kubectl
+  131  which kubectl
+  132  clear
+  133  mkdir .kube
+  134  cd .kube/
+  135  touch config
+  136  vi config 

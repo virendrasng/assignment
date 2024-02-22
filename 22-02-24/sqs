@@ -1,0 +1,6 @@
+ 
+aws sqs create-queue --queue-name MyQueue
+
+export queueurl=$(aws sqs get-queue-url --queue-name "MyQueue"|jq ".QueueUrl"|sed "s/sqs.us-east-1.amazonaws.com/queue.amazonaws.com/g"|sed 's/"//g')
+
+ aws sqs send-message --queue-url $queueurl --message-body Message --region us-east-1

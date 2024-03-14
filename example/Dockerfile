@@ -5,6 +5,7 @@ RUN groupadd tomcat && useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 USER tomcat
 WORKDIR /opt/tomcat
 ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.tar.gz /tmp
+RUN chmod 777 apache-tomcat-9.0.86.tar.gz
 RUN ls -ltr /tmp
 RUN tar xzvf /tmp/apache-tomcat-9.0.*tar.gz -C /tmp --strip-components=1
 RUN cp -r apache-tomcat-9.0.84/* /opt/tomcat/
